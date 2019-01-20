@@ -1,0 +1,27 @@
+﻿<Window x:Class="GxFWPPSys.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GxFWPPSys"
+        mc:Ignorable="d"
+        Title="FW20 Intraday Pivot System" Height="600" Width="800" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  >
+    <Grid Background="#FFF5F5C0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="150*"/>
+        </Grid.RowDefinitions>
+        <Border  Grid.Row="0" Background="Black" BorderThickness="4,4,4,2"/>
+        <Border  Grid.Row="1" Background="Black" BorderThickness="4,2"/>
+        <Border  Grid.Row="2" Background="Black" BorderThickness="4,2,4,4"/>
+
+        <Label x:Name="lbClock" Content="00:00:00" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FF7FB9FF" Background="{x:Null}" Grid.RowSpan="2"/>
+        <Label x:Name="lbSymbol" Content="FW20H1920" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFEE7F" Background="{x:Null}"/>
+        <Label x:Name="lbNolStatus" Content="NOL - offline" HorizontalAlignment="Left" Margin="669,3,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFF9C7F" Background="{x:Null}"/>
+        <Label x:Name="lbMtStatus" Content="MT4 - offline" HorizontalAlignment="Left" Margin="669,29,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFF9C7F" Background="{x:Null}"/>
+
+
+
+    </Grid>
+</Window>

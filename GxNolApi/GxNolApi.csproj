@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2ACAAFD5-0FA2-4B0C-9C5B-5FD9A0AD1D76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GxNolApi</RootNamespace>
+    <AssemblyName>GxNolApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive, Version=4.1.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>packages\System.Reactive.4.1.2\lib\net46\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\BosAccount.cs" />
+    <Compile Include="Accounts\BosAccounts.cs" />
+    <Compile Include="Accounts\BosOrder.cs" />
+    <Compile Include="Accounts\BosOrders.cs" />
+    <Compile Include="Accounts\BosOrderSide.cs" />
+    <Compile Include="Accounts\BosOrderStatus.cs" />
+    <Compile Include="Accounts\BosOrderStatusReport.cs" />
+    <Compile Include="Accounts\BosOrderTradeReport.cs" />
+    <Compile Include="Accounts\BosOrderTradeReports.cs" />
+    <Compile Include="Accounts\BosSymbol.cs" />
+    <Compile Include="Accounts\BosSymbols.cs" />
+    <Compile Include="DTO\AccountData.cs" />
+    <Compile Include="DTO\Instrument.cs" />
+    <Compile Include="DTO\MarketData.cs" />
+    <Compile Include="DTO\MarketOfferData.cs" />
+    <Compile Include="DTO\MarketStatsData.cs" />
+    <Compile Include="DTO\MarketTradeData.cs" />
+    <Compile Include="DTO\OrderData.cs" />
+    <Compile Include="DTO\OrderMainData.cs" />
+    <Compile Include="DTO\OrderStatusData.cs" />
+    <Compile Include="DTO\OrderTradeData.cs" />
+    <Compile Include="DTO\Paper.cs" />
+    <Compile Include="DTO\PriceType.cs" />
+    <Compile Include="Fixml\BizMsgReject\BizMessageRejectMsg.cs" />
+    <Compile Include="Fixml\ExecReport\ExecutionReportMsg.cs" />
+    <Compile Include="Fixml\MarketData\MarketDataFullRefreshMsg.cs" />
+    <Compile Include="Fixml\MarketData\MarketDataIncRefreshMsg.cs" />
+    <Compile Include="Fixml\MarketData\MarketDataReqRejectMsg.cs" />
+    <Compile Include="Fixml\MarketData\MarketDataRequestMsg.cs" />
+    <Compile Include="Fixml\MarketData\MDEntry.cs" />
+    <Compile Include="Fixml\News\NewsMsg.cs" />
+    <Compile Include="Fixml\Orders\NewOrderSingleMsg.cs" />
+    <Compile Include="Fixml\Orders\OrderCancelRequestMsg.cs" />
+    <Compile Include="Fixml\Orders\OrderReplaceRequestMsg.cs" />
+    <Compile Include="Fixml\Orders\OrderSide.cs" />
+    <Compile Include="Fixml\Orders\OrderStatusRequestMsg.cs" />
+    <Compile Include="Fixml\Orders\OrderType.cs" />
+    <Compile Include="Fixml\Orders\OrdTimeInForce.cs" />
+    <Compile Include="Fixml\Session\TradingSessionStatusMsg.cs" />
+    <Compile Include="Fixml\Session\TrdSesStatusRequestMsg.cs" />
+    <Compile Include="Fixml\Statment\StatementData.cs" />
+    <Compile Include="Fixml\Statment\StatementMsg.cs" />
+    <Compile Include="Fixml\User\UserRequestMsg.cs" />
+    <Compile Include="Fixml\User\UserResponseMsg.cs" />
+    <Compile Include="Fixml\_Base\FixmlInstrument.cs" />
+    <Compile Include="Fixml\_Base\FixmlMsg.cs" />
+    <Compile Include="Fixml\_Base\FixmlUtil.cs" />
+    <Compile Include="Fixml\_Exceptions\FixmlErrorMsgException.cs" />
+    <Compile Include="Fixml\_Exceptions\FixmlException.cs" />
+    <Compile Include="Fixml\_Exceptions\FixmlSocketException.cs" />
+    <Compile Include="GxBossaNolAPI.cs" />
+    <Compile Include="GxNolApi.cs" />
+    <Compile Include="IGxNolApi.cs" />
+    <Compile Include="IMessage.cs" />
+    <Compile Include="MarketData\BosInstrument.cs" />
+    <Compile Include="MarketData\BosInstruments.cs" />
+    <Compile Include="MarketData\BosInstrumentType.cs" />
+    <Compile Include="MarketData\BosOffer.cs" />
+    <Compile Include="MarketData\BosOffers.cs" />
+    <Compile Include="MarketData\BosPrice.cs" />
+    <Compile Include="MarketData\BosSessionStats.cs" />
+    <Compile Include="MarketData\BosTrade.cs" />
+    <Compile Include="MarketData\BosTrades.cs" />
+    <Compile Include="NolClient\INolClient.cs" />
+    <Compile Include="NolClient\NolClient.cs" />
+    <Compile Include="NolClient\NolClientException.cs" />
+    <Compile Include="NolClient\NolMsgHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Message.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
