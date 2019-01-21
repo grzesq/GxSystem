@@ -4,10 +4,6 @@ using System.ServiceModel;
 namespace GxMTService
 {
 
-    public interface IMTQuote
-    {
-    }
-
     [ServiceContract]
     public interface IMTService
     {
@@ -21,7 +17,10 @@ namespace GxMTService
         bool Deinit();
 
         [OperationContract]
-        bool NewQuote(double ask, double bid, double lastTr);
+        bool NewQuote(double ask, 
+                      double bid, 
+                      double lastTr, 
+                      uint time);
 
         [OperationContract]
         bool NewBar(double o,

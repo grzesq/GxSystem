@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GxMTService.DTO;
+using System;
 using System.Collections.Generic;
 using System.ServiceModel;
 
@@ -27,20 +28,21 @@ namespace GxMTService
             return MTHost.MTDeinit();
         }
 
-        public bool NewQuote(double ask, double bid, double lastTr)
+        public bool NewQuote(double ask, double bid, double lastTr, uint time)
         {
-            return true;
+                            
+            return MTHost.MTNewQuote(new MTQuote(ask, bid, lastTr, time));
         }
 
         public bool NewBar(double o, double h, double l, double c,
                            double atr, uint time)
         {
-            return true;
+            return MTHost.MTNewBar(o, h, l, c, atr, time);
         }
 
         public bool NewWeekBar(double o, double h, double l, double c, uint time)
         {
-            return true;
+            return MTHost.MTNewWeekBar(o, h, l, c, time);
         }
     }
 }

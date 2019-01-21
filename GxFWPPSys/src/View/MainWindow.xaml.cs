@@ -1,5 +1,4 @@
-﻿using GxFWPPSys.src;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Media;
@@ -73,7 +72,7 @@ namespace GxFWPPSys
         private void SetSubscription()
         {
             newSecondSubscription = SysTimer.NewSecond.Subscribe(OnNewSecond);
-            mtOnlineSubscription = MTBridge.MtConnect.Subscribe(OnMtConnect);
+            mtOnlineSubscription  = MTBridge.MtConnect.Subscribe(OnMtConnect);
         }
 
         private void UpdateClock()

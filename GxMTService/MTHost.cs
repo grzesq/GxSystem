@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GxMTService.DTO;
+using System;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 
@@ -9,7 +10,7 @@ namespace GxMTService
         private static MTHost mtHost = new MTHost();
         private IMTService chanel = null;
 
-        #region MT Command
+        #region MT DLL Command
 
         public static bool Init()
         {
@@ -49,7 +50,7 @@ namespace GxMTService
         }
 
         public static bool NewWeekBar(double o, double h,
-                                double l, double c, uint time)
+                                      double l, double c, uint time)
         {
             bool ok = mtHost.chanel != null;
             if (ok)
@@ -57,6 +58,43 @@ namespace GxMTService
                 try
                 {
                     ok = mtHost.chanel.NewWeekBar(o, h, l, c, time);
+                }
+                catch
+                {
+                    ok = false;
+                    mtHost.chanel = null;
+                }
+            }
+            return ok;
+        }
+
+        public static bool NewQuote(double ask, double bid, double lastTr, uint time)
+        {
+            bool ok = mtHost.chanel != null;
+            if (ok)
+            {
+                try
+                {
+                    ok = mtHost.chanel.NewQuote(ask, bid, lastTr, time);
+                }
+                catch
+                {
+                    ok = false;
+                    mtHost.chanel = null;
+                }
+            }
+            return ok;
+        }
+
+        public static bool NewBar(double o, double h,
+                             double l, double c, double atr, uint time)
+        {
+            bool ok = mtHost.chanel != null;
+            if (ok)
+            {
+                try
+                {
+                    ok = mtHost.chanel.NewBar(o, h, l, c, atr, time);
                 }
                 catch
                 {
@@ -78,6 +116,16 @@ namespace GxMTService
 
         public delegate bool DeinitHandler();
         public static event  DeinitHandler OnDeinit;
+
+        public delegate bool NewQuoteHandler(MTQuote quote);
+        public static event  NewQuoteHandler OnNewQuote;
+
+        public delegate bool NewWeekBarHandler(MTBar bar);
+        public static event NewWeekBarHandler OnNewWeekBar;
+
+        public delegate bool NewBarHandler(MTAtrBar bar);
+        public static event NewBarHandler OnNewBar;
+
 
         public static bool StartHost()
         {
@@ -129,6 +177,36 @@ namespace GxMTService
             }
             return false;
         }
+
+        public static bool MTNewQuote(MTQuote quote)
+        {
+            if (OnNewQuote != null)
+            {
+                return OnNewQuote(quote);
+            }
+            return false;
+        }
+
+        public static bool MTNewBar(double o, double h, double l, double c,
+                           double atr, uint time)
+        {
+            if (OnNewBar != null)
+            {
+                return OnNewBar(new MTAtrBar(o, h, l, c, atr, time));
+            }
+            return false;
+        }
+
+        public static bool MTNewWeekBar(double o, double h, double l, double c, uint time)
+        {
+            if (OnNewWeekBar != null)
+            {
+                return OnNewWeekBar(new MTBar(o, h, l, c, time));
+            }
+            return false;
+        }
+
+
 
         #endregion
 

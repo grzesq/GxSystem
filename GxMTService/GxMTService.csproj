@@ -55,7 +55,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\MTStatus.cs" />
+    <Compile Include="DTO\MTBar.cs" />
+    <Compile Include="DTO\MTQuote.cs" />
     <Compile Include="Message\IClientCallback.cs" />
     <Compile Include="Message\IMTService.cs" />
     <Compile Include="MTHost.cs" />

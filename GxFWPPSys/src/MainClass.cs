@@ -2,7 +2,7 @@
 using System.ServiceModel;
 using System.Runtime.Serialization;
 
-namespace GxFWPPSys.src
+namespace GxFWPPSys
 {
     public class MainClass
     {

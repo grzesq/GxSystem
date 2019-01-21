@@ -13,13 +13,38 @@
             <RowDefinition Height="150*"/>
         </Grid.RowDefinitions>
         <Border  Grid.Row="0" Background="Black" BorderThickness="4,4,4,2"/>
-        <Border  Grid.Row="1" Background="Black" BorderThickness="4,2"/>
+        <Border  Grid.Row="1" Background="Black" BorderThickness="4,2" />
         <Border  Grid.Row="2" Background="Black" BorderThickness="4,2,4,4"/>
 
-        <Label x:Name="lbClock" Content="00:00:00" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FF7FB9FF" Background="{x:Null}" Grid.RowSpan="2"/>
+        <Label x:Name="lbClock" Content="00:00:00" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FF7FB9FF" Background="{x:Null}" />
         <Label x:Name="lbSymbol" Content="FW20H1920" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFEE7F" Background="{x:Null}"/>
         <Label x:Name="lbNolStatus" Content="NOL - offline" HorizontalAlignment="Left" Margin="669,3,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFF9C7F" Background="{x:Null}"/>
         <Label x:Name="lbMtStatus" Content="MT4 - offline" HorizontalAlignment="Left" Margin="669,29,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFF9C7F" Background="{x:Null}"/>
+
+        <Label Content="Ask" HorizontalAlignment="Left" Margin="380,6,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFF9C7F" Background="{x:Null}" />
+        <Label x:Name="lbAsk" Content="2000" HorizontalAlignment="Left" Margin="375,26,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFFFFF" Background="{x:Null}" />
+        <Label Content="Trn" HorizontalAlignment="Left" Margin="440,6,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFEE7F" Background="{x:Null}" />
+        <Label x:Name="lbTrs" Content="2000" HorizontalAlignment="Left" Margin="435,26,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFFFFF" Background="{x:Null}" />
+        <Label Content="Bid" HorizontalAlignment="Left" Margin="500,6,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FF7FB9FF" Background="{x:Null}" />
+        <Label x:Name="lbBid" Content="2000" HorizontalAlignment="Left" Margin="495,26,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFFFFF" Background="{x:Null}" />
+
+
+        <Label Content="S3" HorizontalAlignment="Left" Margin="33,6,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFF9C7F" Background="{x:Null}" Grid.Row="1"/>
+        <Label x:Name="lbS3" Content="2000" HorizontalAlignment="Left" Margin="22,32,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFFFFF" Background="{x:Null}" Grid.Row="1"/>
+        <Label Content="S2" HorizontalAlignment="Left" Margin="93,6,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFF9C7F" Background="{x:Null}" Grid.Row="1"/>
+        <Label x:Name="lbS2" Content="2000" HorizontalAlignment="Left" Margin="82,32,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFFFFF" Background="{x:Null}" Grid.Row="1"/>
+        <Label Content="S1" HorizontalAlignment="Left" Margin="153,6,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFF9C7F" Background="{x:Null}" Grid.Row="1"/>
+        <Label x:Name="lbS1" Content="2000" HorizontalAlignment="Left" Margin="142,32,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFFFFF" Background="{x:Null}" Grid.Row="1"/>
+
+        <Label Content="PP" HorizontalAlignment="Left" Margin="213,6,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFEE7F" Background="{x:Null}" Grid.Row="1"/>
+        <Label x:Name="lbPP" Content="2000" HorizontalAlignment="Left" Margin="202,32,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFFFFF" Background="{x:Null}" Grid.Row="1"/>
+
+        <Label Content="R1" HorizontalAlignment="Left" Margin="273,6,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FF7FB9FF" Background="{x:Null}" Grid.Row="1"/>
+        <Label x:Name="lbR1" Content="2000" HorizontalAlignment="Left" Margin="262,32,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFFFFF" Background="{x:Null}" Grid.Row="1"/>
+        <Label Content="R2" HorizontalAlignment="Left" Margin="333,6,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FF7FB9FF" Background="{x:Null}" Grid.Row="1"/>
+        <Label x:Name="lbR2" Content="2000" HorizontalAlignment="Left" Margin="322,32,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFFFFF" Background="{x:Null}" Grid.Row="1"/>
+        <Label Content="R1" HorizontalAlignment="Left" Margin="393,6,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FF7FB9FF" Background="{x:Null}" Grid.Row="1"/>
+        <Label x:Name="lbR3" Content="2000" HorizontalAlignment="Left" Margin="382,32,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Microsoft Tai Le" Foreground="#FFFFFFFF" Background="{x:Null}" Grid.Row="1"/>
 
 
 

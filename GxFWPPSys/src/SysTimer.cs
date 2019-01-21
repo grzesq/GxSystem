@@ -2,7 +2,7 @@
 using System.Reactive.Subjects;
 using System.Timers;
 
-namespace GxFWPPSys.src
+namespace GxFWPPSys
 {
     public class SysTimer
     {
